@@ -94,7 +94,7 @@ We recommend that you shut down one before starting another.*
 ### Unit Tests
 TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
 
-Look for the example `app/app.component.spec.ts`.
+Look for the example `app/core.component.spec.ts`.
 Add more `.spec.ts` files as you wish; we configured karma to find them.
 
 Run it with `npm tests`.
