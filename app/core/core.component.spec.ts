@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { AppComponent } from './app.component';
+import { CoreComponent } from './core.component';
 
 import {
   expect, it, iit, xit,
@@ -28,19 +28,19 @@ describe('Smoke test', () => {
 });
 
 
-describe('AppComponent', function () {
+describe('CoreComponent', function () {
   it('should instantiate component',
     injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
 
-      return tcb.createAsync(AppComponent).then(fixture => {
-        expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
+      return tcb.createAsync(CoreComponent).then(fixture => {
+        expect(fixture.componentInstance instanceof CoreComponent).toBe(true, 'should create CoreComponent');
       });
     }));
 
   it('should have expected <h1> text',
     injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
 
-      return tcb.createAsync(AppComponent).then(fixture => {
+      return tcb.createAsync(CoreComponent).then(fixture => {
         // fixture.detectChanges();  // need for a binding; we don't have one
         let h1 = fixture.debugElement.query(el => el.name === 'h1').nativeElement;
         expect(h1.innerText).toMatch(/angular 2 app/i, '<h1> should say something about "Angular 2 App"');
